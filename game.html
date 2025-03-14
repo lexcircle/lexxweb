@@ -1,0 +1,281 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+
+<style type="text/css">
+	body{
+		font-family: "Arial",sans-serif;
+		background-color: orange;
+	}
+	.header{
+		font-weight: bold;
+		background-color: black;
+		padding: 40px;
+		text-align: center;
+	}
+	.header ul{
+		list-style-type: none;
+	}
+	.header li{
+		word-spacing: 150px;
+		display: inline;
+
+	}
+	.header a{
+		text-decoration: none;
+		color: aqua;
+		font-family: "copperplate",fantasy;
+		font-size: 20px;
+
+	}
+	.header a:hover{
+		color: white;
+		transition: 0.3s ease;
+		letter-spacing: 5px;
+	}
+	.header a:not(hover){
+		transition: 0.3s ease;
+	}
+	.opening{
+		text-align: center;
+		font-family: "lucida handwriting",cursive;
+	}
+	.game{
+		font-size: 20px;
+	}
+	.game button{
+		background-color: green;
+		color: white;
+		font-weight: bold;
+	}
+	.game button:hover{
+		background-color: white;
+		color: green;
+	}
+	.game input{
+		border-radius: 0px;
+		background-color: black;
+		color: white;
+		text-align: center;
+		font-weight: bold;
+	}
+	.game p{
+		color: green;
+		font-family: "Papyrus",fantasy ;
+		font-weight: bold;
+	}
+	.game label{
+		font-family: "copperplate",fantasy;
+	}
+	#p1,#p2,#p3,#p4,#p5,#p6 {
+		position: absolute;
+		left: 50%; 
+		transform: translateX(-50%); 
+		font-size: 20px;
+	}
+	.finishbutton button{
+		font-size: 50px;
+	}
+	.finishbutton button:hover{
+		background-color: white;
+		color: green;
+		letter-spacing: 5px;
+		transition: 0.3s ease;
+	}
+	.finishbutton button:not(hover){
+		transition: 0.3s ease;
+	}
+	.last p{
+		font-family: "copperplate",fantasy;
+		color: black;
+		font-weight: bold;
+		position: absolute;
+	}
+	.endnav{
+		background-color: black;
+		padding: 20px;
+		text-align: right;
+	}
+	.endnav ul{
+		list-style-type: none;
+	}
+	.fa{
+		padding: 20px;
+		font-size: 30px;
+		width: 50px;
+		text-align: center;
+		text-decoration: none;
+		margin : 5px 2px;
+	}
+	.fa-instagram {
+		 background: #125688;
+		 color: white;
+		 width: 30px;
+		 border-radius: 100px;
+	}
+	.fa-youtube {
+  		background: #bb0000;
+  		color: white;
+	}
+	.fa:hover{
+		opacity: 0.7;
+	}
+</style>
+</head>
+<body>
+	<div class="header">
+		<ul>
+			<li>
+				<a href="alexweb.html">Home</a>
+				<a href="community.html">Community</a>
+				<a href="game.html">Game</a>
+				<a href="social.html">Social</a>
+			</li>
+		</ul>
+	</div>
+	<br>
+	<div class="opening">
+		<h1>WELCOME TO LEX GAME</h1>
+		<p>You just need to guess everything right. It is not really important but, goodluck !!</p>
+
+	</div>
+	<br>
+	<div class="game">
+		<label>1. What is my fav indonesian food ?</label>
+		<input id="first">
+		<button onclick="funcone()">submit</button>
+		<p id="p1"></p>
+		<br><br><br>
+		<hr>
+		<label>2. Am i taken or not ?</label>
+		<input id="second">
+		<button onclick="functwo()">submit</button>
+		<p id="p2"></p>
+		<br><br><br>
+		<hr>
+		<label>3. My fav food (International) ?</label>
+		<input id="third">
+		<button onclick="functhree()">submit</button>
+		<p id="p3"></p>
+		<br><br><br>
+		<hr>
+		<label>4. My fav sport ?</label>
+		<input id="four">
+		<button onclick="funcfour()">submit</button>
+		<p id="p4"></p>
+		<br><br><br>
+		<hr>
+		<label>5. What is my fav game ?</label>
+		<input id="five">
+		<button onclick="funcfive()">submit</button>
+		<p id="p5"></p>
+		<br><br><br>
+		<hr>
+		<label>6. What month i was born ?(hint : DON'T)</label>
+		<input id="six">
+		<button onclick="funcsix()">submit</button>
+		<p id="p6"></p>
+		<br><br><br>
+		<div class="finishbutton">
+			<button onclick="finish()">FINISH</button>
+		</div>
+		<div class="last">
+			<p id="end"></p>
+		</div>
+	</div>
+	<br><br><br><br>
+	<div class="endnav">
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-youtube"></a>
+	</div>
+</body>
+<script type="text/javascript">
+	function funcone(){
+		let favfood = document.getElementById("first").value;
+		let result = document.getElementById("p1");
+		if(favfood.toLowerCase()==="siomay"){
+			result.innerHTML = "True !";
+		}else{
+			result.innerHTML = "False !";
+		}
+	}
+	function functwo(){
+		let taken = document.getElementById("second").value;
+		let result2 = document.getElementById("p2");
+		if(taken.toLowerCase()==="yes"){
+			result2.innerHTML = "True !";
+		}else{
+			result2.innerHTML = "U WISH !";
+		}
+	}
+	function functhree(){
+		let inter = document.getElementById("third").value;
+		let result3 = document.getElementById("p3");
+		if(inter.toLowerCase()==="sushi"){
+			result3.innerHTML = "True !";
+		}else{
+			result3.innerHTML = "False !";
+		}
+	}
+	function funcfour(){
+		let sport = document.getElementById("four").value;
+		let result4 = document.getElementById("p4");
+		if(sport.toLowerCase()==="badminton"){
+			result4.innerHTML="True !";
+		}else{
+			result4.innerHTML="False !";
+		}
+	}
+	function funcfive(){
+		let game = document.getElementById("five").value;
+		let result5 = document.getElementById("p5");
+		if(game.toLowerCase()==="pubg"){
+			result5.innerHTML="True !";
+		}else{
+			result5.innerHTML="False !";
+		}
+	}
+	function funcsix(){
+		let month = document.getElementById("six").value;
+		let result6 = document.getElementById("p6");
+		if(month.toLowerCase()==="don't"){
+			result6.innerHTML = "True !";
+		}else if(month.toLowerCase()==="april"){
+			result6.innerHTML = "WHAT DID I JUST TELL YOU !"
+		}else if(month.toLowerCase()==="dont"){
+			result6.innerHTML = "TYPO BRUH !";
+		}else{
+			result6.innerHTML = "False !";
+		}
+	}
+	function finish(){
+		document.getElementById("end").innerHTML = "You have done all of the questions. Thanks for playing hehe !.";
+	}
+
+</script>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

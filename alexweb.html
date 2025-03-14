@@ -1,0 +1,239 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style type="text/css">
+	.header{
+		font-weight: bold;
+		background-color: black;
+		padding: 40px;
+		text-align: center;
+			}
+	.header ul{
+		list-style-type: none;
+	}
+	.header li{
+		word-spacing: 150px;
+		display: inline;
+
+	}
+	.header a{
+		text-decoration: none;
+		color: aqua;
+		font-family: "copperplate",fantasy;
+		font-size: 20px;
+
+	}
+	.header a:hover{
+		color: white;
+		transition: 0.3s ease;
+		letter-spacing: 5px;
+	}
+	.header a:not(hover){
+		transition: 0.3s ease;
+	}
+	.firsttitle{
+		font-family: "times new roman",serif;
+		text-align: center;
+		display: inline-block;
+    	position: relative;
+
+	}
+	.explosive{
+		font-size: 3rem;
+	    color:grey;
+	    letter-spacing: 0.1em;
+	    display: inline-block;
+	    position: relative;
+	    transition: transform 0.3s ease-out;
+	}
+	.explosive:hover{
+		transform: scale(1.1);
+	}
+	.explosive:hover::before,
+	.explosive:hover::after{
+		content: '';
+	    position: absolute;
+	    top: 50%;
+	    left: 50%;
+	    width: 200%;
+	    height: 200%;
+	    border-radius: 50%;
+	    transform: translate(-50%, -50%) scale(0);
+	    animation: burst 0.8s ease-out forwards;
+	}
+	.explosive:hover::before{
+		background: radial-gradient(circle, rgba(0, 200, 255, 0.6), transparent);
+   		 z-index: -2;
+	}
+	@keyframes burst {
+    0% {
+        transform: translate(-50%, -50%) scale(0);
+        opacity: 1;
+    }
+    70% {
+        opacity: 0.8;
+    }
+    100% {
+        transform: translate(-50%, -50%) scale(1.5);
+        opacity: 0;
+    }
+}
+	.firsttitle p{
+		padding-left: 100px;
+		padding-right: 100px;
+	}
+	.firstimage img{
+		height: 300px;
+		width: 500px;
+		display: block;
+		margin-left: auto;
+		margin-right: auto;
+	}
+	.t1{
+		border-radius: 20px;
+		border-style: solid;
+		padding: 20px;
+		margin-right: 900px;
+		background-color: grey;
+		color: black;
+		border-color: lightgrey;
+	}
+	.t2{
+		border-radius: 20px;
+		border-style: solid;
+		padding: 20px;
+		background-color: grey;
+		color: black;
+		border-color: lightgrey;
+		margin-left: 900px;
+	}
+	.t3{
+		border-radius: 20px;
+		border-style: solid;
+		padding: 20px;
+		margin-right: 900px;
+		background-color: grey;
+		color: black;
+		border-color: lightgrey;
+	}
+	.t4{
+		border-radius: 20px;
+		border-style: solid;
+		padding: 20px;
+		background-color: grey;
+		color: black;
+		border-color: lightgrey;
+		margin-left: 900px;
+	}
+	.endnav{
+		background-color: black;
+		padding: 20px;
+		text-align: right;
+	}
+	.endnav ul{
+		list-style-type: none;
+	}
+	.fa{
+		padding: 20px;
+		font-size: 30px;
+		width: 50px;
+		text-align: center;
+		text-decoration: none;
+		margin : 5px 2px;
+	}
+	.fa-instagram {
+		 background: #125688;
+		 color: white;
+		 width: 30px;
+		 border-radius: 100px;
+	}
+	.fa-youtube {
+  		background: #bb0000;
+  		color: white;
+	}
+	.fa:hover{
+		opacity: 0.7;
+	}
+</style>
+</head>
+<body>
+	<div class="header">
+		<ul>
+			<li>
+				<a href="alexweb.html">Home</a>
+				<a href="community.html">Community</a>
+				<a href="game.html">Game</a>
+				<a href="social.html">Social</a>
+			</li>
+		</ul>
+	</div>
+	<br>
+
+	<div class="firsttitle">
+		<h1 class="explosive">MY NAME IS ALEXANDER CHANDRA</h1>
+		<p>Hi, im alex. im currently studying at Binus University Computer Science. I have no idea why i decided to choose that major. I kinda regreted it tho but at least, i can make this website without help from gpt. Im 19 years old. the reason why i chose compsci is because i always want to be a software engineer or a web dev. thats why i made this website to show you my current skill. Probably my skills gonna upgrade and of course im going to learn a lot of new things, which gonna help myself in the future. And you probably thingking what else can you do in this website except reading. Yes you're right, nothing. Enjoy reading guys, explore this website and yeah thankyou for your time ! </p>
+		<h1 style="color: grey;">The Journey of Coding</h1>
+		<p>The first time i know coding was when my uncle told me about it. He told me he used to learn coding back when he was in college. I had no idea what was that. I searched it on youtube and i found hundreds of videos about coding, and when i watched it, there were so many line of codes there. There was nothing i could understand. But there is something intresting. Somehow i like doing what people dont know how to do it. And i thought coding was one of the things. When i code, i enjoy when the code is so complicated, because no one understands it. And i look smart yeah. So i decided to learn how to code from websites and youtube (you can see them in the timeline). And here i am, stuck in computer science class, dont know what my purpose is, all i can do is code. yeah, cool innit.</p>
+	</div>
+	<br>
+	<div class="firstimage">
+		<img src="code.jpeg" alt="Photo of me coding">
+	</div>
+	<br>
+	<br>
+	<hr>
+	<div class="timeline">
+		<div class="t1">
+			<h1>2017</h1>
+			<p>i found out about coding because of my uncle and decided to know about it. I love coding at the first sight lol.</p>
+		</div>
+		<div class="t2">
+			<h1>2018-2021</h1>
+			<p>I have been learning how to code for a long time. But i also stopped learning for a long time either, so my skills were stuck and was not upgrading.</p>
+		</div>
+		<div class="t3">
+			<h1>2021-2023</h1>
+			<p>When i was in highschool, i learned how to code using HTML and JavaScript. Started from there, i knew how to make a website. I started to uprgade my skills in using HTML, CSS, and JavaScript.</p>
+		</div>
+		<div class="t4">
+			<h1>2021-2024</h1>
+			<p>I keep learning how to code and starterd to learn using python, c++, c, Java, X, database, even using c# to make a game in unity. I tried to make a game that looks like geometry dash but i faild beacause my laptop crashed.</p>
+		</div>
+	</div>
+	<br>
+	<div class="endnav">
+		<a href="#" class="fa fa-instagram"></a>
+		<a href="#" class="fa fa-youtube"></a>
+	</div>
+</body>
+</html>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
